@@ -12,4 +12,4 @@ if you'd like to set a bigger string, I'd recommend creating separate file for i
 
 ```/add``` adds user's id into ```active-users.json```.
 
-```/remoce``` removes user's id from ```active-users.json```
+```/remove``` removes user's id from ```active-users.json```
