@@ -7,7 +7,7 @@ change season number (and channel name), timings or messages in ```config.py```.
 if you'd like to set a larger string, I'd recommend creating separate file for it and reading it in ```config.py```.
 
 # Usage
-```/start``` send a start message (depending on if user's id is in the ```all-users.json```) and writes user's info into ```all-users.json```.
+```/start``` sends a start message (depending on if user's id is in the ```all-users.json```) and writes user's info into ```all-users.json```.
 
 ```/help``` sends a help message.
 
