@@ -1,5 +1,5 @@
 # Set up
-clone this repo, add ```private.py``` in which create two variables ```TOKEN``` and ```BOT_NAME``` (as shown in private_example.py, which you can remove) - you get them when you create your bot via BotFather.
+clone this repo, change ```private.py``` so that ```TOKEN``` and ```BOT_NAME``` match your bot's token and name (you get them when you create your bot via BotFather).
 you can also set commands' descriptions (and commands themselves to show in chat) via any method you prefer (for example, using BotFather command).
 
 # Config
