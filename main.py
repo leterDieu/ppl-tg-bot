@@ -1,7 +1,7 @@
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
-import time
 import json
+from ppl import manage_unread_messages
 
 from private import TOKEN, BOT_USERNAME
 from config import *
@@ -73,8 +73,6 @@ async def remove_user_command(update: Update, context: ContextTypes.DEFAULT_TYPE
 
 # Response section
 def handle_response(text: str) -> str:
-    # processed_text: str = text.lower()
-
     return 'type /help'
 
 
@@ -100,13 +98,12 @@ async def error(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # Alongside job
 async def callback_minute(context: ContextTypes.DEFAULT_TYPE):
-    with open('active-users.json', 'r', encoding='utf-8') as f:
-        active_users = json.load(f)
+    if manage_unread_messages():
+        with open('active-users.json', 'r', encoding='utf-8') as f:
+            active_users = json.load(f)
 
-    for chat_id_loop in active_users:
-        await context.bot.send_message(chat_id=chat_id_loop, text=SPAM_MESSAGE)
-
-    print(0)
+        for chat_id_loop in active_users:
+            await context.bot.send_message(chat_id=chat_id_loop, text=SPAM_MESSAGE)
 
 
 if __name__ == '__main__':
