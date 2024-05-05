@@ -19,6 +19,6 @@ if you'd like to set a larger string, I'd recommend creating separate file for i
 ## What trigers the bot to notify users?
 the function ```manage_unread_messages``` scarps ```CHANNEL_NAME``` channel's messages, which have an id smaller than the last seen id (which is written later in ```last-message-id.txt```) and tries to find "PepeLand ```SEASON_NUMBER```" in the text of the message. notice that the loop doesn't break when it finds it, but it continues so that ```last-message0id``` is up to date.
 ## Passing other info into notification
-if you'd like to get some more info from the bot when it notifies you, I'd suggest returning this info in ```manage_unread_messages``` and changing ```callback_minute``` function, so it manages them correctly.
+if you'd like to get more info from the bot when it notifies you, I'd suggest returning this info in ```manage_unread_messages``` and changing ```callback_minute``` function, so it manages it correctly.
 ## Timings
-you may want to change ```JOB_INTERVAL``` to get but be aware that it can lead into blocking your proxi (or smth like this idk).
+you may want to change ```JOB_INTERVAL``` to get the notification faster, but be aware that it can lead into blocking your proxi (or smth like this idk).
